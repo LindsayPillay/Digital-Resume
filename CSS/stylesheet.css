@@ -122,6 +122,7 @@ body {
 .Qualification-1 {
     background-image: url("/images/gridBackground.jpg");
     margin-left: 10px;
+    padding-bottom: 30px;
 }
 
 .Qualification-1:hover {
@@ -131,6 +132,7 @@ body {
 .Qualification-2 {
     background-image: url("/images/gridBackground.jpg");
     margin-right: 10px;
+    padding-bottom: 30px;
 }
 
 .Qualification-2:hover {
@@ -147,6 +149,7 @@ body {
 .Job-1 {
     background-image: url("/images/gridBackground.jpg");
     margin-left: 10px;
+    padding-bottom: 30px;
 }
 
 .Job-1:hover {
@@ -156,6 +159,7 @@ body {
 .Job-2 {
     background-image: url("/images/gridBackground.jpg");
     margin-right: 10px;
+    padding-bottom: 30px;
 }
 
 .Job-2:hover {
@@ -317,6 +321,32 @@ form {
     padding-bottom: 10px;
 }
 
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+form {
+    font-size: 15px;
+}
+
+.name {
+    width: 150px;
+    height: 20px;
+    background-color: lightslategrey;
+}
+
+.email {
+    width: 150px;
+    height: 20px;
+    background-color: lightslategrey;
+}
+
+.msg {
+    width: 170px;
+    background-color: lightslategrey;
+}
+
 .submit:hover {
     background-color: blue;
     color: white;
@@ -429,6 +459,7 @@ form {
     .name {
         width: 100px;
         height: 10px;
+        background-color: lightslategray;
     }
 
     .email {
