@@ -17,7 +17,7 @@ nav {
 
     display: flex;
     flex-direction: repeat(4, 1fr);
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
@@ -47,12 +47,12 @@ button:hover {
 }
 
 .center {
-    padding-top: 50px;
+    padding-top: 10px;
     padding-right: 300px;
 }
 
 @keyframes LOGOLP {
-    0% {border-radius: 0;}
+    0% {border-radius: 100%;}
     25%{transform: rotate(90deg);}
     50%{transform: rotate(180deg);}
     75%{transform: rotate(270deg);}
@@ -62,11 +62,29 @@ button:hover {
 .LOGOLP {
     width: 50px;
     height: 50px;
+    border-radius: 100%;
     animation-name: LOGOLP;
-    animation-duration: 3s;
+    animation-duration: 5s;
     animation-timing-function: ease-in-out;
     animation-direction: alternate;
     animation-iteration-count: infinite;
+}
+
+.linkedin-logo-top {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    filter: grayscale(100%);
+}
+
+.githubLogo {
+    width: 40px;
+    height: 40px;
+}
+
+.location-icon {
+    width: 40px;
+    height: 40px;
 }
 
 .profile-picture {
@@ -133,7 +151,6 @@ body {
 
 .Job-1:hover {
     background-image: url("/images/hero3.jpg");
-    border-radius: 10%;
 }
 
 .Job-2 {
@@ -159,6 +176,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 5px;
     margin-right: 10px;
+    margin-left: 10px;
 }
 
 .skillset {
@@ -207,11 +225,12 @@ h3 {
 
 /* Contact */
 .Contact {
-    background-image: url("/images/footer.jpg");
+    background-image: url("/images/hero2.jpg");
     background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     color: white;
+    font-size: 15px;
 }
 
 #Contact {
@@ -239,7 +258,18 @@ h3 {
     animation-name: linkedinLogo;
     animation-duration: 4s;
     animation-iteration-count: infinite;
-    animation-direction: alternate;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+}
+
+/* Phone/E-mail Icon */
+.icon {
+    width: 50px;
+    height: 50px;
+    animation-name: linkedinLogo;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
     animation-timing-function: ease-in-out;
 }
 
@@ -252,6 +282,14 @@ h3 {
     text-align: center;
     margin: 0;
     }
+
+.text1 {
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    margin: 0;
+}
 
 /* intro text */
 .intro {
@@ -266,12 +304,11 @@ h3 {
 footer{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2px;
 }
 
 /* Form */
 form {
-    background-image: url("/images/footer.jpg");
+    background-image: url("/images/hero2.jpg");
     background-size: cover;
     color: white;
     text-align: center;
@@ -280,117 +317,414 @@ form {
     padding-bottom: 10px;
 }
 
+.submit:hover {
+    background-color: blue;
+    color: white;
+}
+
 #Feedback {
     background-color: transparent;
     color: white;
 }
 
-/* Responsive: Phones
+/* Responsive: Phones ------------------------------------------------------------------------------------------------------------------------ */
 @media screen and (max-width: 425px) {
-    h1 {
-        font-size: 25px;
+    /* Header */
+    .header {
+        padding-top: 20px;
+        padding-bottom: 10px;
     }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    h3 {
-        font-size: 15px;
-    }
-
-    .intro {
-        font-size: 15px;
-    }
-
-    .textnav {
-        font-size: 8px;
+    .center {
+        padding: 0;
     }
 
     .profile-picture {
         width: 100px;
         height: 100px;
-        border-width: 5px;
     }
 
-    nav {
-        padding-bottom: 2px;
+    h1 {
+        font-size: 20px;
     }
 
-    .text {
+    .intro {
         font-size: 10px;
     }
 
-    form {
+    .LOGOLP {
+        width: 25px;
+        height: 25px;
+    }
+
+    .linkedin-logo-top {
+        width: 20px;
+        height: 20px;
+    }
+
+    .githubLogo {
+        width: 20px;
+        height: 20px;
+    }
+
+    .location-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .text1 {
+        font-size: 10px;
+    }
+
+    /* Nav Bar */
+    .textnav > button {
+        width: 76px;
+        height: 20px;
+        font-size: 10px;
+    }
+
+    /* Education/Experience */
+    h2 {
+        font-size: 15px;
+    }
+
+    h3 {
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+
+    .text {
+        font-size: 8px;
+        padding: 5px;
+    }
+
+    #codespace {
+        font-size: 10px;
+    }
+
+    .skillset {
+        padding: 5px;
+        font-size: 10px;
+    }
+
+    /* Contact */
+    .Contact {
         font-size: 10px;
     }
 
     .linkedin-logo {
-        width: 30px;
-        height: 30px;
-        margin-bottom: 5px;
+        width: 20px;
+        height: 20px;
     }
 
-    .linkedin-text {
-        font-size: 15px;
+    /* Phone/E-mail Icons */
+    .icon {
+        width: 20px;
+        height: 20px;
     }
+
+    form {
+        font-size: 8px;
+    }
+
+    .name {
+        width: 100px;
+        height: 10px;
+    }
+
+    .email {
+        width: 130px;
+        height: 10px;
+    }
+
+    .msg {
+        width: 130px;
+    }
+
+    .submit {
+        height: 15px;
+        width: 50px;
+        font-size: 8px;
+    }
+
 }
 
-/* Responsive: Tablets
+/* Responsive: Tablets ------------------------------------------------------------------------------------------------------------------------*/
 @media screen and (min-width: 426px) {
-    h1 {
-        font-size: 35px;
+    .header {
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+    .center {
+        padding: 0;
     }
 
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .intro {
+        font-size: 15px;
+    }
+
+    .LOGOLP {
+        width: 30px;
+        height: 30px;
+    }
+
+    .linkedin-logo-top {
+        width: 20px;
+        height: 20px;
+    }
+
+    .githubLogo {
+        width: 20px;
+        height: 20px;
+    }
+
+    .location-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .text1 {
+        font-size: 12px;
+    }
+
+    /* Nav Bar */
+    .textnav > button {
+        width: 76px;
+        height: 20px;
+        font-size: 12px;
+    }
+
+    /* Education/Experience */
     h2 {
         font-size: 25px;
     }
 
     h3 {
         font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .text {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    #codespace {
+        font-size: 20px;
+    }
+
+    .skillset {
+        padding: 5px;
+        font-size: 15px;
+    }
+
+    /* Contact */
+    .Contact {
+        font-size: 15px;
+    }
+
+    .linkedin-logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Phone/E-mail Icons */
+    .icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    form {
+        font-size: 12px;
+    }
+
+    .name {
+        width: 100px;
+        height: 10px;
+    }
+
+    .email {
+        width: 130px;
+        height: 10px;
+    }
+
+    .msg {
+        width: 130px;
+    }
+
+    .submit {
+        height: 15px;
+        width: 50px;
+        font-size: 8px;
+    }
+
+
+}
+
+/* Responsive: Laptop --------------------------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width: 800px) {
+    .center {
+        padding-right: 150px;
+    }
+
+    .profile-picture {
+        width: 250px;
+        height: 250px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    .intro {
+        font-size: 15px;
+    }
+
+    .LOGOLP {
+        width: 40px;
+        height: 40px;
+    }
+
+    .linkedin-logo-top {
+        width: 30px;
+        height: 30px;
+    }
+
+    .githubLogo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .location-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .text1 {
+        font-size: 12px;
+    }
+
+    /* Nav Bar */
+    .textnav > button {
+        width: 76px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    /* Education/Experience */
+    h2 {
+        font-size: 25px;
+    }
+
+    h3 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .text {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    #codespace {
+        font-size: 20px;
+    }
+
+    .skillset {
+        padding: 5px;
+        font-size: 15px;
+    }
+
+    /* Contact */
+    .Contact {
+        font-size: 15px;
+    }
+
+    .linkedin-logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Phone/E-mail Icons */
+    .icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    form {
+        font-size: 12px;
+    }
+
+    .name {
+        width: 100px;
+        height: 10px;
+    }
+
+    .email {
+        width: 130px;
+        height: 10px;
+    }
+
+    .msg {
+        width: 130px;
+    }
+
+    .submit {
+        height: 25px;
+        width: 70px;
+        font-size: 15px;
+    }
+
+} 
+
+/* Larger Laptop--------------------------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width: 1024px) {
+    /* Nav Bar */
+    .textnav > button {
+        width: 100px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    /* Header */
+    h1 {
+        font-size: 45px;
     }
 
     .intro {
         font-size: 20px;
     }
 
-    .textnav {
-        font-size: 15px;
+    .LOGOLP {
+        width: 50px;
+        height: 50px;
     }
 
-    .profile-picture {
-        width: 200px;
-        height: 200px;
-        border-width: 8px;
+    .linkedin-logo-top {
+        width: 40px;
+        height: 40px;
     }
 
-    nav {
-        padding-bottom: 2px;
+    .githubLogo {
+        width: 40px;
+        height: 40px;
     }
 
-    .text {
-        font-size: 12px;
+    .location-icon {
+        width: 40px;
+        height: 40px;
     }
 
-    form {
-        font-size: 10px;
-    }
-
-    .linkedin-logo {
-        width: 30px;
-        height: 30px;
-        margin-bottom: 5px;
-    }
-
-    .linkedin-text {
-        font-size: 15px;
-    }
-} 
-
-Responsive: Laptop 
-@media screen and (min-width: 769px) {
-    h1 {
-        font-size: 50px;
+    .text1 {
+        font-size: 18px;
     }
 
     h2 {
@@ -399,41 +733,49 @@ Responsive: Laptop
 
     h3 {
         font-size: 25px;
-    }
-
-    .intro {
-        font-size: 25px;
-    }
-
-    .textnav {
-        font-size: 22px;
-    }
-
-    .profile-picture {
-        width: 300px;
-        height: 300px;
-        border-width: 10px;
-    }
-
-    nav {
-        padding-bottom: 2px;
+        margin-bottom: 5px;
     }
 
     .text {
         font-size: 15px;
+        padding: 5px;
     }
 
-    form {
-        font-size: 12px;
+    #codespace {
+        font-size: 25px;
     }
 
-    .linkedin-logo {
-        width: 50px;
-        height: 50px;
-        margin-bottom: 5px;
-    }
-
-    .linkedin-text {
-        font-size: 20px;
-    }
-}  */
+    /* Contact */
+        .Contact {
+            font-size: 20px;
+        }
+    
+        .linkedin-logo {
+            width: 40px;
+            height: 40px;
+        }
+    
+        /* Phone/E-mail Icons */
+        .icon {
+            width: 40px;
+            height: 40px;
+        }
+    
+        form {
+            font-size: 15px;
+        }
+    
+        .name {
+            width: 150px;
+            height: 20px;
+        }
+    
+        .email {
+            width: 150px;
+            height: 20px;
+        }
+    
+        .msg {
+            width: 170px;
+        }
+}
