@@ -1,4 +1,4 @@
-# digital-resume
+# LINPIL201_FTC2306_GroupA_LindsayPillay_ITW9
 Final Resume Project
 
 
